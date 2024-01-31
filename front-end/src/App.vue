@@ -1,15 +1,7 @@
-<script>
-import ToDoList from "./components/ToDoList.vue";
-
-export default {
-  components: {
-    ToDoList,
-  },
-};
+<script setup>
+import TasksComp from './components/TasksComp.vue'
 </script>
 
 <template>
-  <ToDoList />
+  <tasks-comp />
 </template>
-
-<style scoped></style>
