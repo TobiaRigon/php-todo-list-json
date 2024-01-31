@@ -9,10 +9,12 @@ export default {
   },
 
   mounted() {
+    const t = this;
     axios
-      .get(" http://localhost/php-todo-list-json/back-end/mushroomsTask.php")
+      .get(" http://localhost/php-todo-list-json/back-end/mushroomsTask.php.")
       .then((res) => {
-        this.mushroomTasks = res.data;
+        // console.log("data: " + JSON.stringify(res.data));
+        t.mushroomTasks = res.data;
       })
       .catch((err) => console.error(err));
   },
