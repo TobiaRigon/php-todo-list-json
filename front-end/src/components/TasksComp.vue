@@ -54,7 +54,7 @@ export default {
                 }
             };
 
-            axios.post("http://localhost/back-end/createTask.php", params, config)         
+            axios.post("http://localhost/php-todo-list-json/back-end/createTask.php", params, config)         
                  .then(res => {
 
                     this.tasks = res.data;
@@ -74,7 +74,7 @@ export default {
                 }
             };
 
-            axios.post("http://localhost/back-end/toggleTask.php", params, config)
+            axios.post("http://localhost/php-todo-list-json/back-end/toggleTask.php", params, config)
                  .then(res => {
 
                     this.tasks = res.data;
@@ -92,7 +92,7 @@ export default {
                 }
             };
 
-            axios.post("http://localhost/back-end/deleteTask.php", params, config)
+            axios.post("http://localhost/php-todo-list-json/back-end/deleteTask.php", params, config)
                  .then(res => {
 
                     this.tasks = res.data;
@@ -102,7 +102,7 @@ export default {
     },
     mounted() {
 
-        axios.get('http://localhost/back-end/getTasks.php')
+        axios.get('http://localhost/php-todo-list-json/back-end/getTasks.php')
              .then(res => {
 
                 this.tasks = res.data;
